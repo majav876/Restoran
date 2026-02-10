@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restoran Brajlović</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Uključivanje CSS fajla -->
+</head>
+<body>
+    <header>
+        <h1>Dobrodošli u restoran Brajlović</h1>
+        <nav id="main-menu">
+            <ul>
+                <li><a href="#o-nama">O nama</a></li>
+                <li><a href="#meni">Meni</a></li>
+                <li><a href="#rezervacije">Rezervacije</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="o-nama">
+        <h2>O nama</h2>
+        <p>Restoran Brajlović je porodični restoran sa tradicijom dugom više od 50 godina. Nudimo autentične ukuse domaće kuhinje u prijatnom ambijentu.</p>
+    </section>
+
+    <section id="meni">
+        <h2>Meni</h2>
+        <ul>
+            <li>Jela od mesa</li>
+            <li>Riba i plodovi mora</li>
+            <li>Predjela</li>
+            <li>Salate</li>
+            <li>Deserti</li>
+        </ul>
+    </section>
+
+    <section id="rezervacije">
+        <h2>Rezervacije</h2>
+        <p>Za rezervacije molimo pozovite nas na broj: 011-123-4567 ili popunite formular ispod.</p>
+        <!-- Formular za rezervacije -->
+        <form action="procesiranje_formulara.php" method="post" id="rezervacija-forma">
+            <label for="ime">Ime:</label>
+            <input type="text" id="ime" name="ime" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="broj-osoba">Broj osoba:</label>
+            <input type="number" id="broj-osoba" name="broj-osoba" required>
+            <button type="submit">Pošalji</button>
+        </form>
+    </section>
+
+    <section id="kontakt">
+        <h2>Kontakt</h2>
+        <p>Za sve dodatne informacije ili pitanja, možete nas kontaktirati putem telefona ili emaila.</p>
+        <p>Telefon: 011-123-4567</p>
+        <p>Email: info@brajlovic-restoran.com</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Restoran Brajlović</p>
+    </footer>
+    
+    <!-- JavaScript kod -->
+    <script>
+        // Funkcija za validaciju forme
+        function validateForm() {
+            var ime = document.getElementById('ime').value;
+            var email = document.getElementById('email').value;
+            var brojOsoba = document.getElementById('broj-osoba').value;
+
+            // Provera da li su sva polja popunjena
+            if (ime == '' || email == '' || brojOsoba == '') {
+                alert('Molimo vas da popunite sva polja u formularu.');
+                return false;
+            }
+            return true;
+        }
+
+        // Postavljanje event listenera na submit dugme forme
+        document.getElementById('rezervacija-forma').addEventListener('submit', function(event) {
+            // Poziv funkcije za validaciju forme
+            if (!validateForm()) {
+                // Zaustavljanje podrazumevanog ponašanja forme ako validacija nije uspela
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>

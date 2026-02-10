@@ -1,0 +1,119 @@
+/* Resetiranje podrazumevanih stilova */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Parkinsans", sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+/* Stilizacija glavnog naslova */
+header h1 {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 36px;
+    background-color: #e7bc91;
+}
+
+/* Stilizacija navigacije */
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 20px 0;
+}
+
+#main-menu a {
+    flex-grow: 1;
+    text-align: center;
+    display: inline-block;
+    padding: 10px 0;
+    text-decoration: none;
+    color: #6f4518;
+    transition: 1000ms;
+    width: 200px;
+}
+
+#main-menu a:hover {
+    background: #f3d5b5;
+    color: #6f4518;
+
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Stilizacija sekcija */
+section {
+    padding: 40px 20px;
+    background-image: url('C:/Users/Administrator/Desktop/Restoran/img/pozadina/rostilj.img');
+    margin-bottom: 20px;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+
+}
+
+/* Stilizacija podnaslova */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Stilizacija liste menija */
+ul {
+    list-style-type: none;
+
+}
+
+/* Stilizacija formulara */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* Stilizacija kontaktnih informacija */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+}
